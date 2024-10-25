@@ -3,13 +3,21 @@
 <head>
     <title>BWB - Baltic Work Boats</title>
     <link rel="icon" type="image/png" sizes="32x32" href="https://bwb.ee/wp-content/themes/bwb-new/inc/favicon/favicon-32x32.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .scrolled {
+            background-color: rgb(0, 0, 0);
+            border-bottom: 1px black;
+            transition: background-color 0.3s ease;
+        }
+    </style>
 </head>
 <body class="relative h-screen">
     <div class="relative h-screen">
-        <header class="overflow-hidden fixed top-0 left-0 right-0 flex justify-between gap-2 mx-0 my-0 px-20 py-4 bg-black bg-opacity-60 z-40">
+        <header id="header" class="overflow-hidden fixed top-0 left-0 right-0 flex justify-between gap-2 mx-0 my-0 px-20 py-4 background-color: transparent border-b border-orange-500 z-40">
             <svg xmlns="http://www.w3.org/2000/svg" width="98" height="50" viewBox="0 0 98 50" fill="#ffffff">
                 <path d="M65.883963 26.6204188c-.2082341-.0030996-.4146064.0400164-.6045707.1263089-.1081605.0513-.2111326.113109-.3074636.184555v-.242801h-.9029723v4.5431937h.8738441v-1.6701571c.0894721.0438195.1826165.0795182.2783356.1066754.1946618.0489453.3949918.0709611.5955085.065445.2437844-.000832.4827526-.0687002.6913078-.196335.2185732-.1340057.3974413-.3250245.5178336-.5530105.136085-.270453.2051675-.5702762.2013078-.8736911.0189879-.4052833-.118662-.8021469-.3838441-1.1066754-.2560062-.2526518-.6016122-.3908197-.9592867-.3835079zm.1825363 2.3200262c-.1115165.1486261-.2860795.2350521-.4705812.2329843-.1402452.0193317-.2824364.0193317-.4226816 0l-.230436-.1452879v-1.553665l.2498547-.1452879c.1265977-.0582063.2641928-.0879054.4032629-.0870419.1753698-.007022.3457662.0598049.4705812.184555.166489.2001037.2460729.459665.2207266.7198953.0176872.2823739-.0604022.5624033-.2213739.7938481h.0006473zM47.0322325 12.5510471c.4444319-.2262566.8269992-.5595637 1.1139894-.9705497.2669208-.3698096.4145244-.8138608.4226817-1.2715969.0025623-.4021107-.1098253-.7964083-.323646-1.13547118-.2045855-.31954615-.4809298-.58571638-.8065258-.77683246-.2936585-.1775768-.6226125-.28709966-.9631704-.32068063.2151335-.08788844.4209378-.19751977.6142801-.32722513.2186888-.14866082.4023333-.34416743.5378996-.57264398.1679844-.29419532.2480259-.6313139.2304359-.97054974-.00805-.5686235-.2777709-1.10096425-.729498-1.43979057-.6429642-.4593656-1.4204836-.6858155-2.2066182-.6426701h-2.8804492l-.0194187 8.8043194h3.4371202c.5466503.0046555 1.0863025-.1244521 1.5729194-.3763089zm-3.1969749-7.13350783h.671889c.3692221-.01735098.7347443.0809253 1.0466711.2814136.3014104.22530342.4650044.59305873.4317437.97054975.0242241.37589594-.1375093.7394689-.4317437.97054974-.3086044.20886577-.6758227.31104222-1.0466711.29123036l-.671889-.04842932V5.41753927zm1.2000793 6.29712043l-.0097094.0484293h-1.1903699V9.12434555h1.2000793c.4087282-.01778438.8123941.09685887 1.1521796.32722513.285841.23959028.4512528.59547632.4512528.97087692 0 .3754007-.1654118.7312867-.4512528.970877-.3404794.2282901-.7440914.3408548-1.1521796.3213351zm8.4199735-2.30890054h-1.2097886c-.6212327.0046049-1.2229684.219846-1.7088507.61125654-.3979801.3412048-.6263944.8428532-.6239895 1.3704189-.0090332.4539058.1776028.8893488.5113607 1.1930628.3803853.3211248.8639853.4901611 1.3593131.4751309.3618344.0034347.7197185-.0762287 1.046671-.2329843.219003-.1125913.4250157-.2493303.6142801-.4077225l.0770277.0294502v.2428011l.0860898.2617801h1.7761691c-.0546465-.1280973-.0964968-.2613946-.1249273-.3979058-.0394343-.1653557-.0611359-.3345254-.0647292-.5045811V8.8527487c.0153319-.51688036-.2185512-1.00909826-.6272259-1.3200262-.4814879-.3347664-1.0577522-.50179212-1.6415324-.47578533-.5296315-.00230977-1.0568082.07285784-1.5651519.22316754-.3291288.0931111-.6501765.2132759-.9599339.3592932l.3650726.8736911c.2092637-.0889283.4242208-.1634866.6434082-.2231675.3132657-.0837092.6359122-.1261632.959934-.1263089.3174941-.0349372.6348235.0672559.8738441.2814136.1505774.1886863.2258544.4275206.2110172.6695027l.0019418.29123037zm-.4893527 2.32984294c-.1978788.1086314-.418326.1685009-.6434082.1747382-.1920425.0060491-.3827814-.033866-.556671-.1164921-.2129971-.1149638-.3396297-.3454231-.323646-.5890053-.0028209-.2851494.1530481-.5477196.4032629-.6793193.2441385-.1289879.5122313-.2049999.787107-.2231676l.8162351-.065445v1.2133508c-.1275165.0818063-.2906341.1786649-.4828798.2853403z"/>
                 <polygon points="59.2543989 3.66884817 57.5455482 3.85340314 57.5455482 12.9489529 59.2543989 12.9489529"/>
@@ -36,6 +44,9 @@
                 <a class="hover:text-[#ff5000]" href="">Grants</a>
             </div>
         </header>
+
+        
+
         <figure class="absolute inset-0">
             <div class="absolute inset-0 overflow-hidden">
                 <iframe class="-z-10 w-[200vw] h-[200vh] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" src="https://player.vimeo.com/video/336788539?title=0&byline=0&autoplay=1&loop=1&background=1" frameborder="0" allow="autoplay;"></iframe>
@@ -51,9 +62,9 @@
                     <p class=" border-2 border-dotted rounded-full w-16 h-16 flex items-center justify-center">16</p>
                     <p class="top-40 p-4">in&nbsporder</p>
                 </div>
-                <p class="text-xl text-white pl-24 pr-40 ">The Baltic Workboats patented <span class="text-orange-700 font-semibold">wave-piercing</span> technology makes it possible to deliver one of the most stable, safe and crew-friendly workboats in the industry.</p>
+                <p class="text-xl text-white pl-24 pr-40 ">The Baltic Workboats patented <span class="text-orange-700 hover:text-orange-800" href="" font-semibold">wave-piercing</span> technology makes it possible to deliver one of the most stable, safe and crew-friendly workboats in the industry.</p>
                 <p>&nbsp;</p>
-                <button class="w-40 h-14 text-white font-bold py-4 mx-20 border-2 border-orange-700 hover:bg-orange-700 rounded-full">
+                <button class="w-40 h-14 text-white font-bold py-3 mx-20 border-2 border-orange-700 hover:bg-orange-700 rounded-full">
                     Our&nbspproducts</button>
                 <div class="absolute right-0 bottom-0">
                     <img class="px-1 inline-grid h-20" src="https://bwb.ee/wp-content/uploads/2019/07/eas_3.jpg">
@@ -68,7 +79,7 @@
                     </div>
                 </div>
             </div>
-        </div>    
+    </div>    
         <section class="overflow-hidden bg-cover bg-center h-5/6" style="background-image: url('https://bwb.ee/wp-content/uploads/2018/02/front-page_wave-piercing_desktop-768x720.jpg');">
             <div class="relative p-14">
                     <h1 class="py-10 text-white text-5xl font-normal ">Innovation</h1>
@@ -79,73 +90,64 @@
             </div>      
         </section>
         <section class="overflow-hidden bg-gray-900 bg-cover bg-center h-5/6 grid grid-cols-3 ">
-                    <div class="pl-20">
-                    <h1 class="py-10 text-white text-4xl"><span class="text-gray-700">Vessels</span> Pilot 14 WP</h1>
-                    </div>
-                    <div class="">
-                        <img src="https://bwb.ee/3d/14m_loots_360/14m_loots_360_v01_1600x900_001.png" class="absolute -bottom-90 left-60 size-3/5">
+            <div class="pl-20">
+                <h1 class="py-10 text-white text-4xl"><span class="text-gray-700">Vessels</span> Pilot 14 WP</h1>
+            </div>
+            <div class="">
+                <img src="https://bwb.ee/3d/14m_loots_360/14m_loots_360_v01_1600x900_001.png" class="absolute -bottom-90 left-60 size-3/5">
                         
-                    </div>
-                    
-                    <div class="overflow-hidden text-right">   
-                        <button class="w-80 h-24 text-white bg-orange-600 text-xl font-extralight text-left pl-20 py-4">Pilot 14 WP</button>
-                        <button class="w-80 h-24 text-xl text-orange-700 hover:text-orange-800 font-extralight text-left pl-20 py-4">Pilot/ Patrol/ SAR 17WP</button>
-                        <button class="w-80 h-24 text-xl text-orange-700 hover:text-orange-800 font-extralight text-left pl-20 py-4">Pilot 22 WP</button>
-                        <button class="w-80 h-24 text-xl text-orange-700 hover:text-orange-800 font-extralight text-left pl-20 py-4">Pilot 24 WP</button>
-                        <button class="w-80 h-24 text-xl text-orange-700 hover:text-orange-800 font-extralight text-left pl-20 py-4">Patrol 24 WP</button>
-                        <button class="w-80 h-24 text-xl text-orange-700 hover:text-orange-800 font-extralight text-left pl-20 py-4">Patrol 45 WP Hybrid</button>
-                    </div> 
-                    <p>&nbsp;</p>
-                    <div class="">
-                        <button class="relative left-56 inline bg-orange-600 px-2 pb-1 rounded-full font-light text-white font-bold">&lt;</button>
-                        <button class="relative left-80 inline bg-orange-600 px-2 pb-1 rounded-full font-light text-white font-bold">&gt;</button>
-                        <button class="relative bottom-14 left-64 inline text-xl p-10 text-orange-700 border-2 border-dotted border-orange-700 rounded-full w-16 h-16 flex items-center justify-center">360°</button>
-                    </div>
-
-
-
+            </div>
+            <div class="overflow-hidden text-right">   
+                <button class="w-80 h-24 text-white bg-orange-600 text-xl font-extralight text-left pl-20 py-4">Pilot 14 WP</button>
+                <button class="w-80 h-24 text-xl text-orange-700 hover:text-orange-800 font-extralight text-left pl-20 py-4">Pilot/ Patrol/ SAR 17WP</button>
+                <button class="w-80 h-24 text-xl text-orange-700 hover:text-orange-800 font-extralight text-left pl-20 py-4">Pilot 22 WP</button>
+                <button class="w-80 h-24 text-xl text-orange-700 hover:text-orange-800 font-extralight text-left pl-20 py-4">Pilot 24 WP</button>
+                <button class="w-80 h-24 text-xl text-orange-700 hover:text-orange-800 font-extralight text-left pl-20 py-4">Patrol 24 WP</button>
+                <button class="w-80 h-24 text-xl text-orange-700 hover:text-orange-800 font-extralight text-left pl-20 py-4">Patrol 45 WP Hybrid</button>
+            </div> 
+            <p>&nbsp;</p>
+            <div class="">
+                <button class="relative left-56 inline bg-orange-600 px-2 pb-1 rounded-full font-light text-white font-bold">&lt;</button>
+                <button class="relative left-80 inline bg-orange-600 px-2 pb-1 rounded-full font-light text-white font-bold">&gt;</button>
+                <button class="relative bottom-14 left-64 inline text-xl p-10 text-orange-700 border-2 border-dotted border-orange-700 rounded-full w-16 h-16 flex items-center justify-center">360°</button>
+            </div>
         </section>
         <section class="overflow-hidden bg-cover bg-center h-2/3 bg-white grid grid-cols-4" >
-                <div class="pl-10">
-                    <p class="py-10 text-black text-4xl font-bold ">News</p>
-                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-100x100.jpg 100w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-150x150.jpg 150w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-200x200.jpg 200w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-315x315.jpg 315w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-85x85.jpg 85w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-170x170.jpg 170w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-630x630.jpg 630w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-484x484.jpg 484w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-400x400.jpg 400w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-380x380.jpg 380w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-230x230.jpg 230w" data-sizes="auto" alt="" class="rounded-full" sizes="280px" srcset="https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-100x100.jpg 100w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-150x150.jpg 150w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-200x200.jpg 200w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-315x315.jpg 315w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-85x85.jpg 85w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-170x170.jpg 170w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-630x630.jpg 630w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-484x484.jpg 484w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-400x400.jpg 400w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-380x380.jpg 380w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-230x230.jpg 230w">
-                </div>
-                    
-                <div>
-                    <p class="pt-40 text-xl">Contacts for the PILOT 17 WP</p>
-                    <button class="pt-8 text-xl text-orange-400 hover:text-orange-600 text-bold ">Continue &gt</button>
-                    <p class="pt-6 text-xl border-t ">28.02.2024</p>
-                    
-                </div>
-                <div class="pt-28">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-100x100.jpg 100w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-150x150.jpg 150w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-200x200.jpg 200w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-315x315.jpg 315w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-85x85.jpg 85w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-170x170.jpg 170w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-630x630.jpg 630w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-484x484.jpg 484w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-400x400.jpg 400w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-380x380.jpg 380w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-230x230.jpg 230w" data-sizes="auto" alt="" class="rounded-full" sizes="280px" srcset="https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-100x100.jpg 100w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-150x150.jpg 150w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-200x200.jpg 200w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-315x315.jpg 315w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-85x85.jpg 85w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-170x170.jpg 170w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-630x630.jpg 630w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-484x484.jpg 484w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-400x400.jpg 400w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-380x380.jpg 380w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-230x230.jpg 230w">
-                </div>
-                <div>
-
-                    <button class="pl-40  text-xl p-10 text-orange-400 hover:text-orange-600 text-bold">News&nbsparchieve &gt</button>
-                    <p class="pt-12 text-xl">Contract for an innovative multipurpose <br> vessel</p>
-
-                    <button class="py-2  text-xl text-orange-400 hover:text-orange-600 text-bold">Continue &gt</button>
-                    <p class="py-10 text-xl border-t ">23.01.2024</p>
-                </div>
-            </div>      
+            <div class="pl-10">
+                <p class="py-10 text-black text-4xl font-bold ">News</p>
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-100x100.jpg 100w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-150x150.jpg 150w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-200x200.jpg 200w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-315x315.jpg 315w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-85x85.jpg 85w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-170x170.jpg 170w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-630x630.jpg 630w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-484x484.jpg 484w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-400x400.jpg 400w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-380x380.jpg 380w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-230x230.jpg 230w" data-sizes="auto" alt="" class="rounded-full" sizes="280px" srcset="https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-100x100.jpg 100w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-150x150.jpg 150w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-200x200.jpg 200w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-315x315.jpg 315w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-85x85.jpg 85w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-170x170.jpg 170w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-630x630.jpg 630w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-484x484.jpg 484w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-400x400.jpg 400w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-380x380.jpg 380w, https://bwb.ee/wp-content/uploads/2024/02/hamburg-pilot-v1-230x230.jpg 230w">
+            </div>
+            <div>
+                <p class="pt-40 text-xl">Contacts for the PILOT 17 WP</p>
+                <button class="pt-8 text-xl text-orange-400 hover:text-orange-600 text-bold ">Continue &gt</button>
+                <p class="pt-6 text-xl border-t ">28.02.2024</p>
+            </div>
+            <div class="pt-28">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-srcset="https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-100x100.jpg 100w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-150x150.jpg 150w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-200x200.jpg 200w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-315x315.jpg 315w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-85x85.jpg 85w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-170x170.jpg 170w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-630x630.jpg 630w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-484x484.jpg 484w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-400x400.jpg 400w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-380x380.jpg 380w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-230x230.jpg 230w" data-sizes="auto" alt="" class="rounded-full" sizes="280px" srcset="https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-100x100.jpg 100w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-150x150.jpg 150w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-200x200.jpg 200w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-315x315.jpg 315w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-85x85.jpg 85w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-170x170.jpg 170w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-630x630.jpg 630w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-484x484.jpg 484w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-400x400.jpg 400w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-380x380.jpg 380w, https://bwb.ee/wp-content/uploads/2024/01/konf_poi_vaade2-230x230.jpg 230w">
+            </div>
+            <div>
+                <button class="pl-40  text-xl p-10 text-orange-400 hover:text-orange-600 text-bold">News&nbsparchieve &gt</button>
+                <p class="pt-12 text-xl">Contract for an innovative multipurpose <br> vessel</p>
+                <button class="py-2  text-xl text-orange-400 hover:text-orange-600 text-bold">Continue &gt</button>
+                <p class="py-10 text-xl border-t ">23.01.2024</p>
+            </div>    
         </section>
         <section class="overflow-hidden bg-cover bg-center h-screen grid grid-cols-2 pt-20" style="background-image: url('https://bwb.ee/wp-content/uploads/2017/10/Story_of_BWB_Desktop-1440x600.jpg');">
             <p>&nbsp;</p>
-                <div>
-                    <h1 class="py-10 text- text-4xl font-bold px-20 ">Strong track record for the design, build and delivery.</h1>
-                    <p class="leading-9 text-black font-light text-xl px-20">At Baltic Workboats, we have brought shipbuilding into the 21st Century with a major modernization programme, complete with considerable new investments in facilities, equipment and skills.</p>
-                    <button class="relative top-20 -right-20 w-60 h-14 text-2xl font-normal text-white bg-orange-600 hover:bg-orange-700 font-bold py-2 rounded-full">The&nbspstory&nbspof&nbspBWB</button>
-                </div>    
+            <div>
+                <h1 class="py-10 text- text-4xl font-bold px-20 ">Strong track record for the design, build and delivery.</h1>
+                <p class="leading-9 text-black font-light text-xl px-20">At Baltic Workboats, we have brought shipbuilding into the 21st Century with a major modernization programme, complete with considerable new investments in facilities, equipment and skills.</p>
+                <button class="relative top-20 -right-20 w-60 h-14 text-2xl font-normal text-white bg-orange-600 hover:bg-orange-700 font-bold py-2 rounded-full">The&nbspstory&nbspof&nbspBWB</button>
+            </div>    
         </section>
         <section class="overflow-hidden bg-slate-100 h-1/4 grid grid-cols-8 gap-1 p-10">
-                    <h1 class=" text-4xl font-bold ">Proven&nbspquality</h1>
-                    <p>&nbsp;</p>
-                    <img class="h-1/2" src="https://bwb.ee/wp-content/uploads/2023/03/Lloyds-register-logo-2022-200x200.png">
-                    <img class="h-1/2" src="https://bwb.ee/wp-content/uploads/2023/02/ManagementSysCert_ISO9001_14001_45001_col-e1677507502756-200x200.png">
-                    <img class="h-1/2" src="https://bwb.ee/wp-content/uploads/2023/02/ManagementSysCert_ISO9001_14001_45001_col-e1677507502756-200x200.png">
-                    <img class="h-1/2" src="https://bwb.ee/wp-content/uploads/2023/02/ManagementSysCert_ISO9001_14001_45001_col-e1677507502756-200x200.png">
-                    <img class="h-1/2" src="https://bwb.ee/wp-content/uploads/2017/10/tuv-nord.png">    
+            <h1 class=" text-4xl font-bold ">Proven&nbspquality</h1>
+            <p>&nbsp;</p>
+            <img class="h-1/2" src="https://bwb.ee/wp-content/uploads/2023/03/Lloyds-register-logo-2022-200x200.png">
+            <img class="h-1/2" src="https://bwb.ee/wp-content/uploads/2023/02/ManagementSysCert_ISO9001_14001_45001_col-e1677507502756-200x200.png">
+            <img class="h-1/2" src="https://bwb.ee/wp-content/uploads/2023/02/ManagementSysCert_ISO9001_14001_45001_col-e1677507502756-200x200.png">
+            <img class="h-1/2" src="https://bwb.ee/wp-content/uploads/2023/02/ManagementSysCert_ISO9001_14001_45001_col-e1677507502756-200x200.png">
+            <img class="h-1/2" src="https://bwb.ee/wp-content/uploads/2017/10/tuv-nord.png">    
         </section>
         <section class="overflow-hidden bg-contain bg-center bg-white h-5/6 grid grid-cols-3">
             <div class="">
@@ -161,7 +163,6 @@
                 <button class="ml-40 m-5  w-60 h-14 text-2xl font-normal text-orange-600 border-2 border-orange-600 bg-white hover:bg-orange-600 hover:text-white font-bold py-2 rounded-full">Take&nbsp3D&nbsptour</button>
             </div>
         </section>
-
         <section class="overflow-hidden bg-contain bg-center bg-white h-5/6 grid grid-cols-3">
             <div class="">
                 <h1 class="pt-40 pb-6 text-4xl font-bold pl-20 border-b">3D tour in Pilot 15 WP</h1>
@@ -176,7 +177,6 @@
                 <button class="ml-40 m-5  w-60 h-14 text-2xl font-normal text-orange-600 border-2 border-orange-600 bg-white hover:bg-orange-600 hover:text-white font-bold py-2 rounded-full">Take&nbsp3D&nbsptour</button>
             </div>
         </section>
-
         <section class="overflow-hidden h-3/4 bg-gray-900 grid grid-cols-4 px-10 ">
             <div>
                 <img src="https://bwb.ee/wp-content/uploads/2018/03/bwb-logo-white.svg" class="pt-10" >
@@ -187,7 +187,6 @@
                     <path d="M66.3148376 455.415799V274.350276c-4.796137 2.743417-11.6477612 6.172688-15.7587358 9.601959-23.9806849 17.146357-33.5729588 37.03613-34.2581212 66.527863l-4.1109746-5.486834C10.1315187 301.784446 32.0567163 285.323944 67 262.004899V238l-1.3703248.685854-2.0554873.685855c-19.1845479 10.287813-38.3690958 26.062461-50.016857 44.580526C6.02054418 296.297612-2.20140492 314.129822.53924478 329.218616c.68516243 2.057563 1.37032485 3.429271 1.37032485 3.429271 17.81422307 21.947337 41.10974547 56.925904 50.70201947 82.988365 6.1664618 16.460502 8.9071115 27.434171 10.2774364 34.292713.6851624 1.371709.6851624 4.115126 1.3703248 8.230251l.6851624 3.429271H67c-.6851624 1.371709-.6851624-.685854-.6851624-6.172688"></path>
                 </svg>
             </div>
-
             <div class ="p-6 leading-8 text-orange-500 ">
                 <p class="pt-10 text-white ">Navigation</p>
                 <p class="hover:text-orange-600" href="">Products</p>
@@ -200,7 +199,6 @@
                 <p class="hover:text-orange-600" href="">Career</p>
                 <p class="hover:text-orange-600" href="">Grants</p>
                 <p class="hover:text-orange-600" href="">EUROGUARD</p>
-                
             </div>
             <div class ="p-6 leading-8">
                 <p class="pt-10 text-white font-bold">Baltic Workboats AS</p>
@@ -216,12 +214,22 @@
                 <svg class="inline relative -left-4 fill-orange-600 hover:fill-orange-700" width="90px"viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M24.325 8.309s-2.655-.334-8.357-.334c-5.517 0-8.294.334-8.294.334A2.675 2.675 0 0 0 5 10.984v10.034a2.675 2.675 0 0 0 2.674 2.676s2.582.332 8.294.332c5.709 0 8.357-.332 8.357-.332A2.673 2.673 0 0 0 27 21.018V10.982a2.673 2.673 0 0 0-2.675-2.673zM13.061 19.975V12.03L20.195 16l-7.134 3.975z"/></svg> 
     
                 <svg class="inline relative -left-4 fill-orange-600 hover:fill-orange-700"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" version="1.1" width="40px"viewBox="0 0 512 512" xml:space="preserve"><path style="display: inline;" d="M283.122,122.174c0,5.24,0,22.319,0,46.583h83.424l-9.045,74.367h-74.379   c0,114.688,0,268.375,0,268.375h-98.726c0,0,0-151.653,0-268.375h-51.443v-74.367h51.443c0-29.492,0-50.463,0-56.302   c0-27.82-2.096-41.02,9.725-62.578C205.948,28.32,239.308-0.174,297.007,0.512c57.713,0.711,82.04,6.263,82.04,6.263   l-12.501,79.257c0,0-36.853-9.731-54.942-6.263C293.539,83.238,283.122,94.366,283.122,122.174z"></path></svg>
-     
                 <svg class="inline relative -left-4 fill-orange-600 hover:fill-orange-700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px"viewBox="0 -1.5 20 20" version="1.1"><g id="Page-1" stroke="none" stroke-width="1"><g id="Dribbble-Light-Preview" transform="translate(-60.000000, -7560.000000)"><g id="icons" transform="translate(56.000000, 160.000000)"><path d="M23.99,7403.93262 C23.9,7405.8454 22.541,7408.46538 19.911,7411.79058 C17.192,7415.26353 14.891,7417 13.009,7417 C11.843,7417 10.857,7415.94019 10.051,7413.82155 L8.437,7407.99457 C7.839,7405.87495 7.197,7404.81514 6.51,7404.81514 C6.36,7404.81514 5.837,7405.12441 4.941,7405.74296 L4,7404.55117 C4.986,7403.69722 5.957,7402.84326 6.913,7401.99029 C8.228,7400.87138 9.214,7400.28337 9.871,7400.22427 C11.425,7400.07751 12.381,7401.12156 12.74,7403.35839 C13.128,7405.77251 13.397,7407.2726 13.547,7407.8616 C13.995,7409.86303 14.488,7410.86374 15.026,7410.86374 C15.444,7410.86374 16.072,7410.21662 16.908,7408.92141 C17.745,7407.6262 18.193,7406.64026 18.253,7405.96359 C18.372,7404.84469 17.924,7404.28622 16.908,7404.28622 C16.43,7404.28622 15.937,7404.38865 15.429,7404.59451 C16.415,7401.44561 18.298,7399.91499 21.077,7400.00364 C23.138,7400.06274 24.11,7401.37174 23.99,7403.93262 L23.99,7403.93262 Z" id="vimeo-[#144]"></path></svg>
             </div>
             <div>
                 <button class="mt-10 w-60 text-xl font-normal text-white font-bold py-4 rounded-full bg-orange-600 hover:bg-orange-700">Download&nbspcatalog</button>
             </div>
         </section>
+    <script>
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 1) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 
-    </body>
+</body>
+</html>
